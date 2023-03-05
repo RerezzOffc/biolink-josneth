@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+  --black: hsl(0, 0%, 0%);
+	--anti-flash: hsl(0, 0%, 94%);
+	--orioles-orange: hsl(11, 100%, 56%);
+	--vampire-black: hsl(0, 0%, 4%);
+	--dark-charcoal: hsl(0, 0%, 20%);
+	--dark-granite: hsl(0, 0%, 40%);
+	--spanish-gray: hsl(0, 0%, 60%);
+	--platinum: hsl(0, 0%, 90%);
+
+  font-size: 1vw;
+}
+
+:root.dark {
+  --fg: var(--anti-flash);
+  --bg: var(--black);
+  --accent: var(--orioles-orange);
+  --lighter: var(--dark-charcoal);
+}
+
+:root.light {
+  --bg: var(--anti-flash);
+  --fg: var(--black);
+  --accent: var(--orioles-orange);
+  --lighter: var(--dark-granite);
+}
+
+#app {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100lvh;
+  padding: 2rem;
+  font-family: 'Space Grotesk';
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 2.4rem;
+}
+
+.theme {
+  width: .9rem;
+}
+
+.time span{
+  font-weight: 300;
+}
+/* END HEADER */
+
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.mail {
+  font-family: 'Open Sans';
+  color: var(--lighter);
+}
+
+.mail a{
+  color: var(--fg)
+}
+
+.links {
+  display: flex;
+  flex-flow: column;
+}
+
+.links picture {
+  width: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.links a{
+  font-size: 4rem;
+  font-weight: 300;
+}
+/*END FOOTER */
