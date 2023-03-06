@@ -2,6 +2,7 @@ import './style.css'
 import './reset.css'
 
 const toggleTheme = document.getElementById('toggleTheme')
+const toggleThemeMobile = document.getElementById('toggleThemeMobile')
 
 let theme = localStorage.theme || ''
 
@@ -32,6 +33,7 @@ const changeTheme = () => {
 }
 
 toggleTheme.addEventListener('click', changeTheme)
+toggleThemeMobile.addEventListener('click', changeTheme)
 
 function isTouchDevice() {
 	return (

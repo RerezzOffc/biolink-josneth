@@ -91,6 +91,7 @@ html {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -105,6 +106,10 @@ html {
   width: .9rem;
   color: var(--fg);
   transition: .3s color ease-out;
+}
+
+.theme.mobile {
+  display: none;
 }
 
 .time {
@@ -199,11 +204,13 @@ html {
 .links picture {
   width: 6rem;
   border-radius: 50%;
+  
   overflow: hidden;
 }
 
 .links a{
   position: relative;
+  align-self: flex-start;
   font-size: 4rem;
   font-weight: 300;
   line-height: 1.3;
@@ -225,5 +232,36 @@ html {
   transform: translateX(1rem);
   opacity: 1;
 }
-
 /*END FOOTER */
+
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .links a {
+    font-size: 3rem;
+  }
+
+  .links a::before {
+    display: none;
+  }
+
+  .mail {
+    display: none;
+  }
+
+  .theme.mobile {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-block;
+  }
+
+  .theme.desktop {
+    display: none;
+  }
+}
