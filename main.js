@@ -72,9 +72,16 @@ if (!isTouch) {
 const hour = document.getElementById('hour')
 
 const date = new Date()
-hour.innerText = `${date.getHours()}:${date.getMinutes()}`
+hour.innerText = date.toLocaleTimeString('en-GB', {
+	hour: '2-digit',
+	minute: '2-digit',
+});
 
 setInterval(() => {
 	const date = new Date()
-	hour.innerText = `${date.getHours()}:${date.getMinutes()}`
-}, 1000)
+	const time = date.toLocaleTimeString('en-GB', {
+		hour: '2-digit',
+		minute: '2-digit',
+	});
+	hour.innerText = `${time}`
+}, 60000)
